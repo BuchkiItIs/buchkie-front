@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Inter } from 'next/font/google'
-import './globals.css'
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
-import { headers } from 'next/headers' // added
-import ContextProvider from '@/context'
+import { headers } from "next/headers"; // added
+import ContextProvider from "@/context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,13 +25,12 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({
-  children
+  children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
-
   const headersObj = await headers();
-  const cookies = headersObj.get('cookie')
+  const cookies = headersObj.get("cookie");
 
   return (
     <html lang="en">
@@ -41,5 +40,5 @@ export default async function RootLayout({
         <ContextProvider cookies={cookies}>{children}</ContextProvider>
       </body>
     </html>
-  )
+  );
 }
