@@ -37,11 +37,13 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`min-h-screen flex flex-col text-white ${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased dark:bg-black`}
+        className={`min-h-screen flex flex-col text-white  ${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased dark:bg-black`}
       >
         <ContextProvider cookies={cookies}>
           <Header />
-          <main className="grow">{children}</main>
+          <main className="grow container mx-auto p-4 sm:p-6 lg:p-16">
+            {children}
+          </main>
           <Footer />
         </ContextProvider>
       </body>
