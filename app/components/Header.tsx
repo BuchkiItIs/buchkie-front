@@ -1,6 +1,7 @@
 "use client";
 import { modal } from "@/context/";
 import { useAppKitAccount } from "@reown/appkit/react";
+import { Button } from "@/components/ui/button";
 
 export const Header = () => {
   const { isConnected } = useAppKitAccount();
@@ -27,13 +28,13 @@ export const Header = () => {
         {isConnected ? (
           <appkit-account-button />
         ) : (
-          <button
-            className="border border-primary text-primary rounded-none py-2 px-6
+          <Button
+            className="border border-primary text-primary  py-2 px-6 bg-transparent hover:bg-transparent
           text-sm cursor-pointer hover:scale-[0.99] active:scale-[0.99] transition-all duration-300 ease-in-out"
             onClick={() => modal.open()}
           >
             Connect wallet
-          </button>
+          </Button>
         )}
       </div>
     </header>
