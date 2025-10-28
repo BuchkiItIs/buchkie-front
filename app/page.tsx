@@ -1,10 +1,12 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <appkit-button />
+    // 1. Remove min-h-screen from the top-level div.
+    <div className="flex items-center justify-center font-sans">
+      {/* 2. Remove min-h-screen from main. */}
+      <main className="flex w-full max-w-3xl flex-col items-center justify-between p-16  bg-white dark:bg-black sm:items-start">
+        <div className="border border-dashed border-border rounded-xl p-12 h-96 w-full flex items-center justify-center text-primary">
+          Your page content will go here (currently blank)
+        </div>
       </main>
     </div>
   );
