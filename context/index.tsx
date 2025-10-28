@@ -16,14 +16,14 @@ if (!projectId) {
 
 // Set up metadata
 const metadata = {
-  name: "moonpie",
-  description: "Moonpie daily journal app",
+  name: "Buchkie",
+  description: "Buchkie daily journal app",
   url: "https://appkitexampleapp.com", // origin must match your domain & subdomain http://localhost:3000/
   icons: ["https://avatars.githubusercontent.com/u/179229932"],
 };
 
 // Create the modal
-const modal = createAppKit({
+export const modal = createAppKit({
   adapters: [wagmiAdapter],
   projectId,
   networks: [mainnet, sepolia],
