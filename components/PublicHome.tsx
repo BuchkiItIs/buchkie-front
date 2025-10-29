@@ -15,7 +15,7 @@ import {
 
 export default function PublicHome() {
   return (
-    <div className="relative border border-dashed border-border rounded-xl mx-auto p-6 sm:p-8 md:p-12 h-[600px] md:h-96 w-11/12 md:w-4/5 lg:w-1/2 flex items-center justify-center text-primary">
+    <div className="relative border border-dashed border-border rounded-xl mx-auto p-6 sm:p-8 md:p-12 h-[600px] md:h-96 w-11/12 md:w-4/5 lg:w-2/3 flex items-center justify-center text-primary">
       <Card
         className="w-11/12 md:w-2/3 border-primary shadow-lg shadow-primary cursor-pointer hover:scale-95 transition-all ease-in-out duration-400"
         onClick={() => modal.open()}
@@ -35,16 +35,15 @@ export default function PublicHome() {
       <Circle className="absolute -top-4 right-20 w-3 h-3 md:right-60 md:w-4 md:h-4" />
       <Circle className="animate-pulse absolute -top-8 -left-2 w-2 h-2 md:-top-12 md:-left-3" />
       <Triangle className="absolute top-52 left-4 w-4 h-4" />
-      <ScrollText className="absolute bottom-1 -left-4 w-10 h-10 md:-left-10 md:w-12 md:h-12 -rotate-12" />
-      <Triangle className="animate-pulse absolute -bottom-16 left-12 w-10 h-10 md:-bottom-44 md:left-34 md:w-20 md:h-20" />
+      <ScrollText className="absolute sm:bottom-1 bottom-18 -left-4 w-10 h-10 md:-left-10 md:w-12 md:h-12 -rotate-12" />
+      <Triangle className="animate-pulse absolute bottom-6 sm:-bottom-16 left-12 sm:left-22 w-10 h-10 md:-bottom-44 md:left-34 md:w-20 md:h-20" />
       <Triangle className="absolute bottom-32 -right-8 w-2 h-2 md:-right-32" />
-      <Triangle className="animate-pulse absolute bottom-1 -right-8 w-10 h-10 md:-right-32 md:w-16 md:h-16" />
-
-      <Pencil className="absolute bottom-30 right-6 w-8 h-8" />
+      <Triangle className="animate-pulse absolute sm:bottom-1 bottom-16 -right-8 sm:right-52 w-10 h-10 md:-right-32 md:w-16 md:h-16" />
+      <Pencil className="absolute bottom-30 md:right-6 w-8 h-8 sm:right-64 right-6" />
 
       {/* Skeleton Cards - Adjusted for better visibility and overflow on small screens */}
 
-      <SkeletonCard className="top-2 sm:-top-2 -left-4 w-20 rotate-6 md:-left-24 md:w-44">
+      <SkeletonCard className="top-2 sm:top-4 -left-4 w-20 rotate-6 md:-left-24 md:w-44">
         <Skeleton className="h-2 w-full md:h-32" />
         <Skeleton className="h-4 w-full sm:w-3/4" />
       </SkeletonCard>
@@ -65,15 +64,15 @@ export default function PublicHome() {
         </div>
       </SkeletonCard>
 
-      <SkeletonCard className="-bottom-30 -right-2 w-54 -rotate-12 md:-bottom-60 md:-right-12 md:w-80">
-        <Skeleton className="h-32 w-full md:h-48" />
+      <SkeletonCard className="-bottom-30 sm:-bottom-10 -right-2 w-54 -rotate-12 md:-bottom-60 lg:-bottom-35 md:-right-12  lg:-right-16 md:w-80 lg:w-60">
+        <Skeleton className="h-32 w-full md:h-48 lg:h-24" />
         <div className="space-y-2">
           <Skeleton className="h-4 w-5/6" />
           <Skeleton className="h-4 w-2/3" />
         </div>
       </SkeletonCard>
 
-      <SkeletonCard className="top-24 sm:-top-4 left-24 w-24 -rotate-12 md:left-44 md:w-32">
+      <SkeletonCard className="top-24 sm:top-14 lg:-top-12 left-24 sm:left-32 w-24 -rotate-12 md:left-44 lg:left-24 md:w-32">
         <Skeleton className="h-4 w-full" />
         <Skeleton className="h-4 w-2/3" />
         <Skeleton className="h-4 w-full" />
