@@ -15,7 +15,7 @@ import {
 
 export default function PublicHome() {
   return (
-    <div className="relative  rounded-xl mx-auto p-6 sm:p-8 md:p-12 h-[600px] md:h-96 w-11/12 md:w-4/5 lg:w-2/3 flex items-center justify-center text-primary">
+    <div className="relative rounded-xl mx-auto p-6 sm:p-8 md:p-12 h-[600px] md:h-96 w-11/12 md:w-4/5 lg:w-2/3 flex items-center justify-center text-primary">
       {/* Background Border */}
       <div className=" border border-dashed border-border rounded-xl w-full h-full absolute -z-2"></div>
       <Card
@@ -39,8 +39,8 @@ export default function PublicHome() {
       <Triangle className="absolute top-52 left-4 w-4 h-4" />
       <ScrollText className="absolute sm:bottom-1 bottom-18 -left-4 w-10 h-10 md:-left-10 md:w-12 md:h-12 -rotate-12" />
       <Triangle className="animate-pulse absolute bottom-6 sm:-bottom-16 left-12 sm:left-22 w-10 h-10 md:-bottom-44 md:left-34 -z-1 md:w-20 md:h-20" />
-      <Triangle className="absolute bottom-32 -right-8 w-2 h-2 md:-right-32" />
-      <Triangle className="animate-pulse absolute sm:bottom-1 bottom-16 -right-8 sm:right-52 w-10 h-10 md:-right-32 md:w-16 md:h-16 -z-1" />
+      <Triangle className="absolute bottom-32 -right-2 w-2 h-2 md:-right-32" />
+      <Triangle className="animate-pulse absolute sm:bottom-1 bottom-16 -right-2 sm:right-52 w-10 h-10 md:-right-32 md:w-16 md:h-16 -z-1" />
       <Pencil className="absolute bottom-30 md:right-6 w-8 h-8 sm:right-64 right-6" />
 
       {/* Skeleton Cards - Adjusted for better visibility and overflow on small screens */}
@@ -66,8 +66,8 @@ export default function PublicHome() {
         </div>
       </SkeletonCard>
 
-      <SkeletonCard className="-bottom-30 sm:-bottom-10 -right-2 w-54 -rotate-12 md:-bottom-60 lg:-bottom-35 md:-right-12  lg:-right-16 md:w-80 lg:w-60">
-        <Skeleton className="h-32 w-full md:h-48 lg:h-24" />
+      <SkeletonCard className="-bottom-10 sm:-bottom-10 right-2 w-54 -rotate-12 md:-bottom-60 lg:-bottom-35 md:-right-12  lg:-right-16 md:w-80 lg:w-60">
+        <Skeleton className="h-12 w-full md:h-48 lg:h-24" />
         <div className="space-y-2">
           <Skeleton className="h-4 w-5/6" />
           <Skeleton className="h-4 w-2/3" />
