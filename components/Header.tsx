@@ -1,8 +1,9 @@
 "use client";
-import { modal } from "@/context/";
+// import { modal } from "@/context/";
 import { useAppKitAccount } from "@reown/appkit/react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import ConnectButton from "./ConnectButton";
 
 export const Header = () => {
   const { isConnected } = useAppKitAccount();
@@ -10,10 +11,7 @@ export const Header = () => {
     <header className="sticky top-0 z-50 backdrop-blur-md shadow-md border-b border-b-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Logo/Title */}
-        <Link
-          href="/"
-          className="shrink-0 flex items-center gap-2 relative cursor-po"
-        >
+        <div className="shrink-0 flex items-center gap-2 relative cursor-po">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="64"
@@ -28,18 +26,8 @@ export const Header = () => {
           <p className="text-xl font-extrabold tracking-wider absolute left-8 bg-black px-2">
             Buchkie
           </p>
-        </Link>
-        {isConnected ? (
-          <appkit-account-button />
-        ) : (
-          <Button
-            className="border border-primary text-primary  py-2 px-6 bg-transparent hover:bg-transparent
-          text-sm cursor-pointer hover:scale-[0.99] active:scale-[0.99] transition-all duration-300 ease-in-out"
-            onClick={() => modal.open()}
-          >
-            Connect wallet
-          </Button>
-        )}
+        </div>
+        {isConnected ? <appkit-account-button /> : <ConnectButton />}
       </div>
     </header>
   );

@@ -1,5 +1,5 @@
 "use client";
-import { modal } from "@/context/";
+// import { modal } from "@/context/";
 
 import { Skeleton } from "@/components/ui/skeleton";
 import { SkeletonCard } from "@/components/SkeletonCard";
@@ -12,6 +12,7 @@ import {
   Pencil,
   ScrollText,
 } from "lucide-react";
+import ConnectButton from "./ConnectButton";
 
 export default function PublicHome() {
   return (
@@ -21,12 +22,14 @@ export default function PublicHome() {
     >
       {/* Background Border */}
       <div className="sm:block hidden border border-dashed border-border rounded-xl w-full h-full absolute -z-2"></div>
-      <Card
-        className="w-full xl:w-2/3 h-auto border-primary shadow-lg shadow-primary cursor-pointer hover:scale-95 transition-all ease-in-out duration-400"
-        onClick={() => modal.open()}
-      >
+      <Card className="w-full xl:w-2/3 h-auto border-primary shadow-lg shadow-primary cursor-pointer transition-all ease-in-out duration-400">
         <CardHeader>
-          <CardTitle>Wallet not connected</CardTitle>
+          <CardTitle>
+            <div className="flex gap-4 items-center">
+              <span>Wallet not connected </span>
+              <ConnectButton />
+            </div>
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <h1 className="uppercase text-lg sm:text-xl md:text-2xl">

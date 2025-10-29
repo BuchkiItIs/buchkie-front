@@ -5,11 +5,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { AppKit } from "../context/appkit";
 
 const inter = Inter({ subsets: ["latin"] });
 
 import { headers } from "next/headers"; // added
-import ContextProvider from "@/context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,13 +39,13 @@ export default async function RootLayout({
       <body
         className={`min-h-screen flex flex-col text-white ${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased dark:bg-black`}
       >
-        <ContextProvider cookies={cookies}>
+        <AppKit>
           <Header />
           <main className="grow container mx-auto p-4 sm:p-6 lg:p-16">
             {children}
           </main>
           <Footer />
-        </ContextProvider>
+        </AppKit>
       </body>
     </html>
   );
