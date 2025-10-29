@@ -35,58 +35,58 @@ export default function PublicHome() {
         </CardContent>
       </Card>
 
-      <LockKeyhole className="absolute left-32 sm:left-28  top-1 w-12 h-12 md:w-16 md:h-16" />
-      <Link className="animate-pulse absolute -top-1 right-24 sm:right-20 w-8 h-8 md:-top-8 md:-right-3 md:w-16 md:h-16" />
-      <Circle className="absolute top-14 right-24 w-3 h-3 md:right-60 md:w-4 md:h-4" />
-      <Circle className="animate-pulse absolute top-28 left-2 w-2 h-2 md:-top-12 md:-left-3" />
+      <LockKeyhole className="absolute left-32 sm:left-28 top-1 w-12 h-12 lg:w-16 lg:h-16" />
+      <Link className="animate-pulse absolute -top-1 right-24 sm:right-20 w-8 h-8 lg:-top-8 lg:-right-3 lg:w-16 lg:h-16" />
+      <Circle className="absolute top-14 right-24 md:top-18 w-3 h-3 md:right-60 lg:w-4 lg:h-4" />
+      <Circle className="animate-pulse absolute top-28 left-2 w-2 h-2 lg:-top-12 lg:-left-3" />
       <Triangle className="absolute top-52 left-4 w-4 h-4" />
-      <ScrollText className="absolute sm:bottom-8 bottom-40 left-4 sm:left-36 w-10 h-10 md:-left-10 md:w-12 md:h-12 -rotate-12" />
-      <Triangle className="animate-pulse absolute bottom-6 sm:-bottom-2 left-40 sm:left-34 rotate-45 w-6 h-6 md:-bottom-44 md:left-34 md:w-20 md:h-20" />
-      <Triangle className="absolute bottom-2 sm:bottom-38 right-4 w-2 h-2 md:-right-32" />
-      <Triangle className="animate-pulse absolute sm:bottom-1 bottom-16 -right-2 sm:right-64 w-10 h-10 md:-right-32 md:w-16 md:h-16" />
-      <Pencil className="absolute bottom-68 sm:top-15 md:right-6 w-8 h-8 sm:right-68 right-6" />
+      <ScrollText className="absolute sm:bottom-8 bottom-40 left-4 sm:left-36 w-10 h-10 lg:-left-10 md:w-12 md:h-12 -rotate-12" />
+      <Triangle className="animate-pulse absolute bottom-6 sm:-bottom-2 left-40 sm:left-34 rotate-45 w-6 h-6 lg:-bottom-44 lg:left-34 lg:w-20 lg:h-20" />
+      <Triangle className="absolute bottom-2 sm:bottom-38 right-4 w-2 h-2 lg:-right-32" />
+      <Triangle className="animate-pulse absolute sm:bottom-1 bottom-16 -right-2 sm:right-64 w-10 h-10 md:right-80 lg:w-16 lg:h-16" />
+      <Pencil className="absolute bottom-68 sm:top-15 lg:right-6 w-8 h-8 sm:right-68 right-6" />
 
       {/* Skeleton Cards - Adjusted for better visibility and overflow on small screens */}
 
-      <SkeletonCard className="top-2 sm:top-4 -left-1 w-20 rotate-6 md:-left-12 md:w-44">
-        <Skeleton className="h-2 w-full md:h-32" />
-        <Skeleton className="h-4 w-full sm:w-3/4" />1
+      <SkeletonCard className="top-2 sm:top-4 -left-1 w-20 rotate-6 lg:w-44">
+        <Skeleton className="h-2 w-full lg:h-32" />
+        <Skeleton className="h-4 w-full sm:w-3/4" />
       </SkeletonCard>
 
-      <SkeletonCard className="top-4 -right-2 w-24 rotate-12 md:right-6 md:w-60">
-        <Skeleton className="h-8 w-1/2 md:h-10" />
+      <SkeletonCard className="top-4 -right-2 w-24 rotate-12 lg:right-6 lg:w-60">
+        <Skeleton className="h-8 w-1/2 lg:h-10" />
         <Skeleton className="h-4 w-full" />
-        <Skeleton className="h-4 w-full" />2
+        <Skeleton className="h-4 w-full" />
       </SkeletonCard>
 
-      <SkeletonCard className="bottom-72 left-2 w-56 rotate-12 sm:-top-10 sm:left-50 md:w-72">
+      <SkeletonCard className="bottom-72 left-2 w-56 rotate-12 sm:-top-10 sm:left-50 lg:w-72">
         <div className="flex items-center space-x-4">
           <Skeleton className="h-12 w-12" />
           <div className="flex-1 space-y-2">
             <Skeleton className="h-4 w-3/5" />
-            <Skeleton className="h-4 w-4/5" />3
+            <Skeleton className="h-4 w-4/5" />
           </div>
         </div>
       </SkeletonCard>
 
-      <SkeletonCard className="bottom-24 sm:-bottom-10 right-2 w-54 -rotate-12 md:-bottom-60 lg:-bottom-35 md:-right-12  lg:-right-16 md:w-80 lg:w-60">
-        <Skeleton className="h-12 w-full md:h-48 lg:h-24" />
+      <SkeletonCard className="bottom-24 sm:-bottom-10 right-2 w-54 -rotate-12 md:-bottom-35 md:-right-12 lg:-right-16 md:w-80 lg:w-60">
+        <Skeleton className="h-12 w-full md:h-30 lg:h-24" />
         <div className="space-y-2">
           <Skeleton className="h-4 w-5/6" />
-          <Skeleton className="h-4 w-2/3" />4
+          <Skeleton className="h-4 w-2/3" />
         </div>
       </SkeletonCard>
 
-      <SkeletonCard className="top-64 sm:top-14 lg:-top-12 right-2 sm:left-32 w-24 -rotate-12 md:left-44 lg:left-44 md:w-32">
+      <SkeletonCard className="top-64 sm:top-14 lg:-top-12 right-2 sm:left-32 w-24 -rotate-12 lg:left-44 md:w-32">
         <Skeleton className="h-4 w-full" />
         <Skeleton className="h-4 w-2/3" />
-        <Skeleton className="h-4 w-full" />5
+        <Skeleton className="h-4 w-full" />
       </SkeletonCard>
 
-      <SkeletonCard className="-bottom-12 left-4 w-28 rotate-2 md:-bottom-44 md:-left-24 md:w-32">
+      <SkeletonCard className="-bottom-12 left-4 w-28 rotate-2 lg:-bottom-44 lg:-left-24 lg:w-32">
         <Skeleton className="h-4 w-3/4" />
         <Skeleton className="h-6 w-full" />
-        <Skeleton className="h-4 w-full" />6
+        <Skeleton className="h-4 w-full" />
       </SkeletonCard>
     </div>
   );
