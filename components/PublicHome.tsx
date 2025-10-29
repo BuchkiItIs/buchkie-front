@@ -22,7 +22,7 @@ export default function PublicHome() {
     >
       {/* Background Border */}
       <div className="sm:block hidden border border-dashed border-border rounded-xl w-full h-full absolute -z-2"></div>
-      <Card className="w-full xl:w-2/3 h-auto border-primary shadow-lg shadow-primary cursor-pointer transition-all ease-in-out duration-400">
+      <Card className="w-full xl:w-2/3 h-auto border-primary shadow-lg shadow-primary transition-all ease-in-out duration-400">
         <CardHeader>
           <CardTitle>
             <div className="flex gap-4 items-center">
