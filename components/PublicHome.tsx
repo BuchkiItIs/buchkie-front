@@ -15,11 +15,14 @@ import {
 
 export default function PublicHome() {
   return (
-    <div className="relative rounded-xl mx-auto p-6 sm:p-8 md:p-12 h-[600px] md:h-96 w-11/12 md:w-4/5 lg:w-2/3 flex items-center justify-center text-primary">
+    <div
+      className="overflow-hidden relative rounded-none sm:rounded-xl mx-auto px-12 h-[calc(100vh-14rem)] sm:h-[calc(100vh-16rem)] lg:h-[calc(100vh-18rem)]
+    lg:px-40 py-20 sm:py-24 md:py-24 lg:py-40 w-full sm:w-11/12 md:w-4/5 lg:w-2/3 sm:flex sm:items-center justify-center text-primary"
+    >
       {/* Background Border */}
-      <div className=" border border-dashed border-border rounded-xl w-full h-full absolute -z-2"></div>
+      <div className="sm:block hidden border border-dashed border-border rounded-xl w-full h-full absolute -z-2"></div>
       <Card
-        className="w-11/12 md:w-2/3 border-primary shadow-lg shadow-primary cursor-pointer hover:scale-95 transition-all ease-in-out duration-400"
+        className="w-full h-auto border-primary shadow-lg shadow-primary cursor-pointer hover:scale-95 transition-all ease-in-out duration-400"
         onClick={() => modal.open()}
       >
         <CardHeader>
@@ -45,15 +48,15 @@ export default function PublicHome() {
 
       {/* Skeleton Cards - Adjusted for better visibility and overflow on small screens */}
 
-      <SkeletonCard className="top-2 sm:top-4 -left-4 w-20 rotate-6 md:-left-24 md:w-44">
+      <SkeletonCard className="top-2 sm:top-4 -left-4 w-20 rotate-6 md:-left-12 md:w-44">
         <Skeleton className="h-2 w-full md:h-32" />
-        <Skeleton className="h-4 w-full sm:w-3/4" />
+        <Skeleton className="h-4 w-full sm:w-3/4" />1
       </SkeletonCard>
 
-      <SkeletonCard className="top-4 -right-2 w-24 rotate-12 md:-right-14 md:w-60">
+      <SkeletonCard className="top-4 -right-2 w-24 rotate-12 md:right-6 md:w-60">
         <Skeleton className="h-8 w-1/2 md:h-10" />
         <Skeleton className="h-4 w-full" />
-        <Skeleton className="h-4 w-full" />
+        <Skeleton className="h-4 w-full" />2
       </SkeletonCard>
 
       <SkeletonCard className="bottom-28 left-2 w-56 rotate-12 md:-bottom-18 md:left-24 md:w-72">
@@ -61,7 +64,7 @@ export default function PublicHome() {
           <Skeleton className="h-12 w-12" />
           <div className="flex-1 space-y-2">
             <Skeleton className="h-4 w-3/5" />
-            <Skeleton className="h-4 w-4/5" />
+            <Skeleton className="h-4 w-4/5" />3
           </div>
         </div>
       </SkeletonCard>
@@ -70,20 +73,20 @@ export default function PublicHome() {
         <Skeleton className="h-12 w-full md:h-48 lg:h-24" />
         <div className="space-y-2">
           <Skeleton className="h-4 w-5/6" />
-          <Skeleton className="h-4 w-2/3" />
+          <Skeleton className="h-4 w-2/3" />4
         </div>
       </SkeletonCard>
 
-      <SkeletonCard className="top-24 sm:top-14 lg:-top-12 left-24 sm:left-32 w-24 -rotate-12 md:left-44 lg:left-24 md:w-32">
+      <SkeletonCard className="top-24 sm:top-14 lg:-top-12 left-24 sm:left-32 w-24 -rotate-12 md:left-44 lg:left-44 md:w-32">
         <Skeleton className="h-4 w-full" />
         <Skeleton className="h-4 w-2/3" />
-        <Skeleton className="h-4 w-full" />
+        <Skeleton className="h-4 w-full" />5
       </SkeletonCard>
 
       <SkeletonCard className="-bottom-24 -left-10 w-28 rotate-2 md:-bottom-44 md:-left-24 md:w-32">
         <Skeleton className="h-4 w-3/4" />
         <Skeleton className="h-6 w-full" />
-        <Skeleton className="h-4 w-full" />
+        <Skeleton className="h-4 w-full" />6
       </SkeletonCard>
     </div>
   );
