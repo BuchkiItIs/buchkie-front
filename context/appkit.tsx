@@ -14,7 +14,7 @@ if (!projectId) {
 const metadata = {
   name: "Buchkie",
   description: "Buchkie daily journal app",
-  url: "https://appkitexampleapp.com", // origin must match your domain & subdomain http://localhost:3000/
+  url: "https://buchkie.com", // origin must match your domain & subdomain http://localhost:3000/
   icons: ["https://avatars.githubusercontent.com/u/179229932"],
 };
 
