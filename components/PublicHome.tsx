@@ -36,9 +36,9 @@ export default function PublicHome() {
       <Circle className="animate-pulse absolute -top-8 -left-2 w-2 h-2 md:-top-12 md:-left-3" />
       <Triangle className="absolute top-52 left-4 w-4 h-4" />
       <ScrollText className="absolute sm:bottom-1 bottom-18 -left-4 w-10 h-10 md:-left-10 md:w-12 md:h-12 -rotate-12" />
-      <Triangle className="animate-pulse absolute bottom-6 sm:-bottom-16 left-12 sm:left-22 w-10 h-10 md:-bottom-44 md:left-34 md:w-20 md:h-20" />
+      <Triangle className="animate-pulse absolute bottom-6 sm:-bottom-16 left-12 sm:left-22 w-10 h-10 md:-bottom-44 md:left-34 -z-1 md:w-20 md:h-20" />
       <Triangle className="absolute bottom-32 -right-8 w-2 h-2 md:-right-32" />
-      <Triangle className="animate-pulse absolute sm:bottom-1 bottom-16 -right-8 sm:right-52 w-10 h-10 md:-right-32 md:w-16 md:h-16" />
+      <Triangle className="animate-pulse absolute sm:bottom-1 bottom-16 -right-8 sm:right-52 w-10 h-10 md:-right-32 md:w-16 md:h-16 -z-1" />
       <Pencil className="absolute bottom-30 md:right-6 w-8 h-8 sm:right-64 right-6" />
 
       {/* Skeleton Cards - Adjusted for better visibility and overflow on small screens */}
