@@ -15,7 +15,9 @@ import {
 
 export default function PublicHome() {
   return (
-    <div className="relative border border-dashed border-border rounded-xl mx-auto p-6 sm:p-8 md:p-12 h-[600px] md:h-96 w-11/12 md:w-4/5 lg:w-2/3 flex items-center justify-center text-primary">
+    <div className="relative  rounded-xl mx-auto p-6 sm:p-8 md:p-12 h-[600px] md:h-96 w-11/12 md:w-4/5 lg:w-2/3 flex items-center justify-center text-primary">
+      {/* Background Border */}
+      <div className=" border border-dashed border-border rounded-xl w-full h-full absolute -z-2"></div>
       <Card
         className="w-11/12 md:w-2/3 border-primary shadow-lg shadow-primary cursor-pointer hover:scale-95 transition-all ease-in-out duration-400"
         onClick={() => modal.open()}
