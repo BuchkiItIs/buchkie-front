@@ -35,16 +35,16 @@ export default function PublicHome() {
         </CardContent>
       </Card>
 
-      <LockKeyhole className="absolute left-32 top-1 w-12 h-12 md:w-16 md:h-16" />
-      <Link className="animate-pulse absolute -top-1 right-24 w-8 h-8 md:-top-8 md:-right-3 md:w-16 md:h-16" />
+      <LockKeyhole className="absolute left-32 sm:left-28  top-1 w-12 h-12 md:w-16 md:h-16" />
+      <Link className="animate-pulse absolute -top-1 right-24 sm:right-20 w-8 h-8 md:-top-8 md:-right-3 md:w-16 md:h-16" />
       <Circle className="absolute top-14 right-24 w-3 h-3 md:right-60 md:w-4 md:h-4" />
       <Circle className="animate-pulse absolute top-28 left-2 w-2 h-2 md:-top-12 md:-left-3" />
       <Triangle className="absolute top-52 left-4 w-4 h-4" />
-      <ScrollText className="absolute sm:bottom-1 bottom-40 left-4 w-10 h-10 md:-left-10 md:w-12 md:h-12 -rotate-12" />
-      <Triangle className="animate-pulse absolute bottom-6 sm:-bottom-16 left-40 sm:left-22 w-6 h-6 md:-bottom-44 md:left-34 -z-1 md:w-20 md:h-20" />
-      <Triangle className="absolute bottom-2 right-14 w-2 h-2 md:-right-32" />
-      <Triangle className="animate-pulse absolute sm:bottom-1 bottom-16 -right-2 sm:right-52 w-10 h-10 md:-right-32 md:w-16 md:h-16 -z-1" />
-      <Pencil className="absolute bottom-68 md:right-6 w-8 h-8 sm:right-64 right-6" />
+      <ScrollText className="absolute sm:bottom-8 bottom-40 left-4 sm:left-36 w-10 h-10 md:-left-10 md:w-12 md:h-12 -rotate-12" />
+      <Triangle className="animate-pulse absolute bottom-6 sm:-bottom-2 left-40 sm:left-34 rotate-45 w-6 h-6 md:-bottom-44 md:left-34 md:w-20 md:h-20" />
+      <Triangle className="absolute bottom-2 sm:bottom-38 right-4 w-2 h-2 md:-right-32" />
+      <Triangle className="animate-pulse absolute sm:bottom-1 bottom-16 -right-2 sm:right-64 w-10 h-10 md:-right-32 md:w-16 md:h-16" />
+      <Pencil className="absolute bottom-68 sm:top-15 md:right-6 w-8 h-8 sm:right-68 right-6" />
 
       {/* Skeleton Cards - Adjusted for better visibility and overflow on small screens */}
 
@@ -59,7 +59,7 @@ export default function PublicHome() {
         <Skeleton className="h-4 w-full" />2
       </SkeletonCard>
 
-      <SkeletonCard className="bottom-72 left-2 w-56 rotate-12 md:-bottom-18 md:left-24 md:w-72">
+      <SkeletonCard className="bottom-72 left-2 w-56 rotate-12 sm:-top-10 sm:left-50 md:w-72">
         <div className="flex items-center space-x-4">
           <Skeleton className="h-12 w-12" />
           <div className="flex-1 space-y-2">
