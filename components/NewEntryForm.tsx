@@ -9,9 +9,9 @@ export function NewEntryForm() {
   };
 
   return (
-    <div className="p-8">
+    <div className="p-2 sm:p-8">
       {/* Text Box Area */}
-      <div className="p-6 rounded-lg border-2 mb-6 border-primary shadow-md shadow-primary">
+      <div className="p-2 sm:p-6 rounded-lg border-2 mb-6 border-primary shadow-md shadow-primary">
         <Textarea
           placeholder="What's on your mind today? Your thoughts will immutably saved on the blockchain..."
           className="w-full h-64 border-none focus-visible:ring-0 resize-none text-lg placeholder:secondary"
