@@ -57,9 +57,6 @@ export default function ConnectedHome() {
     }
   }, [isConnected, fetchBalance]);
 
-  // Use your lime green color code in the style attribute
-  const limeGreen = "oklch(84.1% 0.238 128.85)";
-
   return (
     <div className="border border-dashed border-border rounded-xl p-12 w-full flex flex-col items-center justify-center text-primary">
       {/* Header (Top Bar) */}
@@ -87,14 +84,7 @@ export default function ConnectedHome() {
 
           {/* Wallet Balance Badge */}
           <div className="mb-6">
-            <Badge
-              className="px-4 py-2 text-base font-semibold border-2"
-              style={{
-                backgroundColor: "oklch(84.1% 0.238 128.85)",
-                color: "black",
-                borderColor: limeGreen,
-              }}
-            >
+            <Badge className="px-4 py-2 text-base font-semibold border-2 border-primary w-full">
               {/* Conditional rendering adjusted for the 'balance' state being null/loading */}
               {balance && balance.isSuccess && balance.data && (
                 <p>
