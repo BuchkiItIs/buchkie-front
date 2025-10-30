@@ -1,10 +1,23 @@
 import { NewEntryForm } from "@/components/NewEntryForm";
 import { JournalRecord } from "@/components/JournalRecord";
 import { Badge } from "@/components/ui/badge";
-import { useAppKitAccount, useAppKitBalance } from "@reown/appkit/react";
+// Import the necessary types from the library
+import {
+  useAppKitAccount,
+  useAppKitBalance,
+  AdapterBlueprint,
+} from "@reown/appkit/react";
 import { AddressDisplay } from "./AddressDisplay";
 import { useEffect, useState } from "react";
 import { formatBalance } from "../lib/utils";
+
+// Define the expected structure of the object returned by fetchBalance()
+interface BalanceState {
+  data: AdapterBlueprint.GetBalanceResult | undefined;
+  error: string | null;
+  isSuccess: boolean;
+  isError: boolean;
+}
 
 // Placeholder data for the history sidebar
 const mockHistory = [
@@ -31,11 +44,16 @@ const mockHistory = [
 export default function ConnectedHome() {
   const { address } = useAppKitAccount();
   const { fetchBalance } = useAppKitBalance();
-  const [balance, setBalance] = useState();
+
+  const [balance, setBalance] = useState<BalanceState | null>(null);
+
   const { isConnected } = useAppKitAccount();
+
   useEffect(() => {
     if (isConnected) {
-      fetchBalance().then(setBalance);
+      fetchBalance().then((result) => {
+        setBalance(result);
+      });
     }
   }, [isConnected, fetchBalance]);
 
@@ -77,12 +95,14 @@ export default function ConnectedHome() {
                 borderColor: limeGreen,
               }}
             >
-              {balance && (
+              {/* Conditional rendering adjusted for the 'balance' state being null/loading */}
+              {balance && balance.isSuccess && balance.data && (
                 <p>
-                  Balance: {formatBalance(balance.data?.balance)}{" "}
-                  {balance.data?.symbol}
+                  Balance: {formatBalance(balance.data.balance)}{" "}
+                  {balance.data.symbol}
                 </p>
               )}
+              {!balance && <p>Loading Balance...</p>}
             </Badge>
           </div>
 
