@@ -79,13 +79,13 @@ export default function ConnectedHome() {
         </div>
 
         {/* RIGHT COLUMN: Journal History & Status (30% width on large screens) */}
-        <div className="lg:col-span-1 p-6 bg-gray-950 rounded-lg border border-gray-800 h-fit">
+        <div className="lg:col-span-1 p-6 bg-gray-950 rounded-md border border-gray-800 h-fit">
           <h2 className="text-2xl font-semibold mb-6">Journal History</h2>
 
           {/* Wallet Balance Badge */}
           <div className="mb-6">
             <div
-              className="flex items-center justify-center border border-primary text-primary w-full p-4 bg-transparent hover:bg-transparent
+              className="rounded-md flex items-center justify-center border border-primary text-primary w-full p-4 bg-transparent hover:bg-transparent
           text-2x"
             >
               {/* Conditional rendering adjusted for the 'balance' state being null/loading */}
