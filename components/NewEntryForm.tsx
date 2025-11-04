@@ -1,5 +1,6 @@
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 export function NewEntryForm() {
   // Placeholder logic for form submission and status
@@ -20,13 +21,15 @@ export function NewEntryForm() {
 
       {/* Submission Button */}
 
-      <Button
-        className="border border-primary text-primary w-full py-6 bg-transparent hover:bg-transparent
+      <button
+        className="w-full
           text-2xl cursor-pointer hover:scale-[0.95] active:scale-[0.99] transition-all duration-400 ease-in-out"
         onClick={handleSubmit}
       >
-        Post to Immutable Ledger
-      </Button>
+        <Badge className="px-4 py-2 text-base font-semibold border-2 border-primary w-full">
+          Post to Immutable Ledger
+        </Badge>
+      </button>
 
       {/* Gas Notice */}
       <p className="mt-2 text-center text-gray-400 text-sm">

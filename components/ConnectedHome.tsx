@@ -84,7 +84,10 @@ export default function ConnectedHome() {
 
           {/* Wallet Balance Badge */}
           <div className="mb-6">
-            <Badge className="px-4 py-2 text-base font-semibold border-2 border-primary w-full">
+            <div
+              className="flex items-center justify-center border border-primary text-primary w-full p-4 bg-transparent hover:bg-transparent
+          text-2x"
+            >
               {/* Conditional rendering adjusted for the 'balance' state being null/loading */}
               {balance && balance.isSuccess && balance.data && (
                 <p>
@@ -93,7 +96,7 @@ export default function ConnectedHome() {
                 </p>
               )}
               {!balance && <p>Loading Balance...</p>}
-            </Badge>
+            </div>
           </div>
 
           {/* History Feed */}
