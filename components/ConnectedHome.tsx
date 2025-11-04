@@ -1,6 +1,5 @@
 import { NewEntryForm } from "@/components/NewEntryForm";
 import { JournalRecord } from "@/components/JournalRecord";
-import { Badge } from "@/components/ui/badge";
 // Import the necessary types from the library
 import {
   useAppKitAccount,
