@@ -17,15 +17,19 @@ export function NewEntryForm() {
       setIsLoading(true); // start loading
       console.log("Uploading to IPFS...");
 
+      console.log("isLoading...", isLoading);
+
       const res = await fetch("/api/upload", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ content: entry }), // match API key name
+        body: JSON.stringify({ content: entry }),
       });
 
       if (!res.ok) {
         const errorData = await res.json().catch(() => ({}));
-        throw new Error(errorData.error || `Upload failed with status ${res.status}`);
+        throw new Error(
+          errorData.error || `Upload failed with status ${res.status}`,
+        );
       }
 
       const data = await res.json();
@@ -67,7 +71,9 @@ export function NewEntryForm() {
         onClick={handleSubmit}
         disabled={isLoading} // disable button while loading
         className={`py-5 font-semibold border-2 border-primary w-full rounded-md text-xl cursor-pointer transition-all duration-400 ease-in-out ${
-          isLoading ? "opacity-20 cursor-not-allowed" : "hover:scale-[0.95] active:scale-[0.99]"
+          isLoading
+            ? "opacity-20 cursor-not-allowed"
+            : "hover:scale-[0.95] active:scale-[0.99]"
         }`}
       >
         {isLoading ? "Uploading..." : "Post to Immutable Ledger"}
