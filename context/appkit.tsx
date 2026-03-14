@@ -1,7 +1,7 @@
 "use client";
 
 import { createAppKit } from "@reown/appkit/react";
-import { Ethers5Adapter } from "@reown/appkit-adapter-ethers5";
+import { EthersAdapter } from "@reown/appkit-adapter-ethers";
 import { mainnet, sepolia } from "@reown/appkit/networks";
 
 // 1. Get projectId at https://dashboard.reown.com
@@ -21,7 +21,7 @@ const metadata = {
 
 // 3. Create the AppKit instance
 createAppKit({
-  adapters: [new Ethers5Adapter()],
+  adapters: [new EthersAdapter()],
   metadata: metadata,
   networks: [mainnet, sepolia],
   projectId,
